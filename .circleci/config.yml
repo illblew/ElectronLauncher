@@ -26,9 +26,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
             - v-6.0.0-electron
-
-      - run: node ./test/out/helpers/downloadElectron.js
-
+    
       - save_cache:
           paths:
             - node_modules
