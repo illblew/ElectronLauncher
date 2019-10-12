@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.16.3
+      - image: electronuserland/builder:wine
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -17,7 +17,8 @@ jobs:
     working_directory: ~/app
 
     steps:
-      - checkout
+      - run: yarn --link-duplicates --pure-lockfile
+      - run: tarn relase --linux --win
 
       # Download and cache dependencies
       - restore_cache:
