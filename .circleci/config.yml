@@ -17,6 +17,8 @@ jobs:
     working_directory: app
 
     steps:
+      - checout
+      - run: yarn cache clean
       - run: yarn --link-duplicates --pure-lockfile
       - run: yarn relase --linux --win
 
