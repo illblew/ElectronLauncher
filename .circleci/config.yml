@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - run: yarn --link-duplicates --pure-lockfile
-      - run: tarn relase --linux --win
+      - run: yarn relase --linux --win
 
       # Download and cache dependencies
       - restore_cache:
